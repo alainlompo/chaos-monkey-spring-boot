@@ -78,10 +78,6 @@ public class AssaultProperties {
 
     @JsonIgnore
     public boolean isWatchedCustomServicesActive() {
-        if (watchedCustomServices == null || watchedCustomServices.isEmpty())
-            return false;
-        return true;
+        return  (watchedCustomServices != null && !watchedCustomServices.isEmpty());
     }
-
-
 }
